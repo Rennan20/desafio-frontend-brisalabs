@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Search from "./pages/Search";
+import All from "./pages/All";
+import GlobalStyle from "./styles/GlobalStyle";
+import { Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import dark from "./styles/themes/dark";
+import { useState } from "react";
+import light from "./styles/themes/light";
+import ThemeBtn from "./components/changetheme/ThemeBtn";
+import NotFound from "./pages/NotFound";
 
-function App() {
+const App = () => {
+  const [theme, setTheme] = useState("light");
+  const isDarkTheme = theme === "dark";
+
+  const toggleTheme = () => {
+    setTheme(isDarkTheme ? "dark" : "light");
+  };
+
+  const token = localStorage.getItem("token");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={isDarkTheme ? dark : light}>
+        <GlobalStyle />
+        <ThemeBtn toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+        <Routes>
+          <Route path="/" element={<Login />} />
+        </Routes>
+        <Routes>
+          <Route path="/Home" element={<Home />} />
+        </Routes>
+        <Routes>
+          <Route path="/Search" element={<Search />} />
+        </Routes>
+        <Routes>
+          <Route path="/All" element={<All />} />
+        </Routes>
+        <Routes>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;

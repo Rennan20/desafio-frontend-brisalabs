@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# Desafio Frontend Brisalabs - Pokédex App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um desafio de frontend para a vaga de desenvolvedor frontend na Brisanet. O objetivo é criar uma aplicação web estilo Pokédex que consome a PokéAPI e oferece funcionalidades de login, listagem de Pokémon, filtragem, busca, favoritos e tema escuro.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- ReactJS
+- TypeScript
+- Styled Components
+- Context API
+- Requisições à PokéAPI
 
-### `npm start`
+## Níveis
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Básico
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Página de Login**: Implementada com a funcionalidade de login e armazenamento do token no LocalStorage.
+- **Verificação de Sessão**: A aplicação verifica se já existe uma sessão salva (token no LocalStorage). Se existir, redireciona para a página "Ver Todos"; caso contrário, redireciona para a página de login.
+- **Listagem Completa (Página "Ver Todos")**: A página lista registros da API, limitando a exibição a 20 itens.
 
-### `npm test`
+### Intermediário
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Filtragem**: Implementada na página "Ver Todos" através de botões.
+- **Busca e Listagem (Página "Procurar")**: É possível realizar a busca por um Pokémon específico e listar todos os registros encontrados.
+- **Detalhes do Pokémon**: Um modal exibe as informações detalhadas de um Pokémon.
 
-### `npm run build`
+### Avançado
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Favoritar Pokémon**: Implementado na página "Favoritos" com contagem de Pokémon favoritados no menu.
+- **Tema Escuro**: Uma opção de tema escuro foi adicionada para aprimorar a experiência do usuário.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Critérios de Avaliação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Componentização: Componentes bem estruturados e reutilizáveis.
+- Clean Code: Código organizado e legível.
+- Organização de Pastas: Estrutura de pastas bem definida.
+- Fidelidade ao Layout: A interface está de acordo com o layout fornecido.
 
-### `npm run eject`
+## Como Executar o Projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone este repositório.
+2. Instale as dependências com `npm install` ou `yarn install`.
+3. Execute a aplicação com `npm start` ou `yarn start`.
