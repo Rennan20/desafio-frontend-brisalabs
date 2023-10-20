@@ -43,6 +43,12 @@ const RightSection = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  const handleKeyPress = (event: { key: string }) => {
+    if (event.key === "Enter") {
+      handleLogin();
+    }
+  };
   return (
     <SectionOne>
       <div>
@@ -61,6 +67,7 @@ const RightSection = () => {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               onFocus={handleInputFocus}
+              onKeyPress={handleKeyPress}
               required
             />
           </InputContainer>
@@ -73,6 +80,7 @@ const RightSection = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
               onFocus={handleInputFocus}
+              onKeyPress={handleKeyPress}
             />
           </InputContainer>
         </Form>
