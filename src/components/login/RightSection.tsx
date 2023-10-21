@@ -16,25 +16,16 @@ import {
   ModalTitle,
   ModalText,
 } from "../../modals/LoginError";
+import { useAuth } from "../../services/Auth/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const RightSection = () => {
+  const authContext = useAuth();
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isInvalid, setIsInvalid] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleLogin = () => {
-    const isAuthenticated = fakeLogin(username, password);
-
-    if (isAuthenticated) {
-      const token = "token_ficticio";
-      localStorage.setItem("token", token);
-      window.location.href = "/All";
-    } else {
-      setIsModalOpen(true);
-      setIsInvalid(true);
-    }
-  };
 
   const handleInputFocus = () => {
     setIsInvalid(false);
@@ -49,6 +40,20 @@ const RightSection = () => {
       handleLogin();
     }
   };
+
+  const handleLogin = () => {
+    const isAuthenticated = fakeLogin(username, password);
+
+    if (isAuthenticated) {
+      const token = "token_ficticio";
+      authContext.login(token);
+      navigate("/All");
+    } else {
+      setIsModalOpen(true);
+      setIsInvalid(true);
+    }
+  };
+
   return (
     <SectionOne>
       <div>
@@ -104,3 +109,19 @@ const RightSection = () => {
 };
 
 export default RightSection;
+
+/*   const handleLogin = () => {
+    const { login } = useAuth();
+    const [token, setToken] = useState("");
+    const isAuthenticated = fakeLogin(username, password);
+
+    if (isAuthenticated) {
+      const token = "token_ficticio";
+      localStorage.setItem("token", token);
+      window.location.href = "/All";
+    } else {
+      setIsModalOpen(true);
+      setIsInvalid(true);
+    }
+  };
+ */

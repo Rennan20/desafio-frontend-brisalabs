@@ -6,19 +6,22 @@ import { PokeAPIProvider } from "./services/PokeAPIContext";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./services/Auth/AuthContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Provider store={store}>
-        <PokeAPIProvider>
-          <App />
-        </PokeAPIProvider>
-      </Provider>
-    </BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <Provider store={store}>
+          <PokeAPIProvider>
+            <App />
+          </PokeAPIProvider>
+        </Provider>
+      </BrowserRouter>
+    </AuthProvider>
   </React.StrictMode>
 );
 
