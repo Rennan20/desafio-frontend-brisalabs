@@ -36,7 +36,7 @@ Este é um desafio de frontend para a vaga de desenvolvedor frontend na Brisanet
 
 - **Favoritar Pokémon**: Implementado na página "Favoritos" com contagem de Pokémon favoritados no menu.
   ![ComFavoritos](public/assets/favorites.png)
-  ![SemmFavoritos]p(public/assets/nonfavorites.png)
+  ![SemmFavoritos](public/assets/nonfavorites.png)
 
 ## Estrutura
 
@@ -66,7 +66,7 @@ Aqui está um exemplo de como o código está organizado:
     - \*\*`reducers.ts`
     - \*\*`store.ts`
 
-      - **`helpers`**: Funções auxiliares
+  - **`helpers`**: Funções auxiliares
 
     - \*\*`SearchData.ts` (Requisitando dados da API).
 
