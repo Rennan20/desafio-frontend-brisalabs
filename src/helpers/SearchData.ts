@@ -28,7 +28,6 @@ const SearchData = () => {
       }));
 
       setPokeData(pokemonDataArray);
-      console.log("Data loaded successfully:", pokemonDataArray);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
