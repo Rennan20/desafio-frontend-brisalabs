@@ -20,13 +20,13 @@ Este é um desafio de frontend para a vaga de desenvolvedor frontend na Brisanet
 ## Funcionalidades
 
 - **Página de Login**: Implementada com a funcionalidade de login e armazenamento do token no LocalStorage.
-  ![Página de Login](/assets/login.png)
+  ![Página de Login](public/assets/login.png)
 
 - **Verificação de Sessão**: A aplicação verifica se já existe uma sessão salva (token no LocalStorage). Se existir, redireciona para a página "Ver Todos"; caso contrário, redireciona para a página de login.
-  ![Verificação](/assets/credentials.png)
+  ![Verificação](public/assets/credentials.png)
 
 - **Listagem Completa e Filtragem(Página "Ver Todos")**: A página lista registros da API, limitando a exibição a 20 itens.
-  ![Filtro](/assets/filter.png)
+  ![Filtro](public/assets/filter.png)
 
 - **Busca e Listagem (Página "Procurar")**: É possível realizar a busca por um Pokémon específico e listar todos os registros encontrados.
   ![Busca](/assets/search.png)
