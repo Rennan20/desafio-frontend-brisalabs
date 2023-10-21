@@ -29,14 +29,14 @@ Este é um desafio de frontend para a vaga de desenvolvedor frontend na Brisanet
   ![Filtro](public/assets/filter.png)
 
 - **Busca e Listagem (Página "Procurar")**: É possível realizar a busca por um Pokémon específico e listar todos os registros encontrados.
-  ![Busca](/assets/search.png)
+  ![Busca](public/assets/search.png)
 
 - **Detalhes do Pokémon**: Um modal exibe as informações detalhadas de um Pokémon.
-  ![Modal](/assets/modal.png)
+  ![Modal](public/assets/modal.png)
 
 - **Favoritar Pokémon**: Implementado na página "Favoritos" com contagem de Pokémon favoritados no menu.
-  ![ComFavoritos](/assets/favorites.png)
-  ![SemmFavoritos](/assets/nonfavorites.png)
+  ![ComFavoritos](public/assets/favorites.png)
+  ![SemmFavoritos]p(public/assets/nonfavorites.png)
 
 ## Estrutura
 
